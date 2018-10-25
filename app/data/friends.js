@@ -1,6 +1,6 @@
 var friends = [{
     name: "ODB",
-    Image: "https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg",
+    image: "https://acclaimmag.com/wp-content/uploads/2015/01/ODB.jpg",
     Scores: [
         5,
         5,
@@ -15,7 +15,7 @@ var friends = [{
     ]
 },{
     name: "Another Fake Person",
-    Image: "skhg",
+    image: "skhg",
     Scores: [
         1,
         3,

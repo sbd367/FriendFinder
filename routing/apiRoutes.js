@@ -16,11 +16,10 @@ module.exports = function(app) {
 
         // For-each loop to go through the data in friends.js to find a match
         friends.forEach(function(friend) {
-        		// Variables for comparing matches
+
             var matchedScoresArray = [];
             var totalDifference = 40;
 
-            // Function to assist in the addition reduce() below
             function add(total, num) {
                 return total + num;
             }
@@ -31,7 +30,7 @@ module.exports = function(app) {
             // new value to the matchedScoresArray
             
 
-            for (var i = 0; i < friends.Scores.length; i++) {
+            for (var i = 0; i < friend.Scores.length; i++) {
                 matchedScoresArray.push(Math.abs(parseInt(req.body.scores[i]) - parseInt(friend.Scores[i])));
 
             }
@@ -40,10 +39,11 @@ module.exports = function(app) {
 
             // If the above value is smaller than the previous difference...
             if (totalDifference < difference) {
-            		// Set it as the previous difference...
+
                 difference = totalDifference;
-                // And set these variables to the appropriate friend match
+
                 matchName = friend.name;
+
                 matchPhoto = friend.photo;
             }
         });
